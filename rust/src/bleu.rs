@@ -78,7 +78,7 @@ fn calculate_bleu(pred: &str, gold: &str) -> f32 {
     }
     let mean = geometric_mean(&bleu_scores);
 
-    let mut brevity_penalty: f32;
+    let brevity_penalty: f32;
 
     if pred_word_vec_len > gold_word_vec_len {
         brevity_penalty = 1.0
